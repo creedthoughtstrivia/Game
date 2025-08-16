@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "setId": "creed-basics-001",
+    "title": "Creed Basics Vol. 1",
+    "author": "CT Team",
+    "version": 1
+  },
+  "settings": {
+    "shuffleQuestions": true,
+    "shuffleAnswers": true,
+    "perQuestionTimerSec": 20,
+    "showExplanations": true
+  },
+  "questions": [
+    {
+      "id": "CB-001",
+      "type": "single",
+      "prompt": "What department does Creed list as his job at Dunder Mifflin?",
+      "answers": ["Quality Assurance", "Sales", "Accounting", "Human Resources"],
+      "correctIndex": 0,
+      "explanation": "Creed Bratton is in charge of Quality Assurance.",
+      "tags": ["creed", "role"],
+      "difficulty": 1
+    },
+    {
+      "id": "CB-002",
+      "type": "single",
+      "prompt": "Creed’s ‘blog’ is actually what?",
+      "answers": ["A Word document", "A MySpace page", "A real blog", "An email list"],
+      "correctIndex": 0,
+      "explanation": "Ryan set up a Word document and told Creed it was a blog.",
+      "tags": ["creed", "running-joke"],
+      "difficulty": 1
+    },
+    {
+      "id": "CB-003",
+      "type": "single",
+      "prompt": "Which instrument does Creed play?",
+      "answers": ["Guitar", "Drums", "Piano", "Violin"],
+      "correctIndex": 0,
+      "explanation": "Both the character and actor are guitarists.",
+      "tags": ["creed", "music"],
+      "difficulty": 1
+    },
+    {
+      "id": "CB-004",
+      "type": "single",
+      "prompt": "Which real band was Creed (the actor) a member of?",
+      "answers": ["The Grass Roots", "The Doors", "The Monkees", "The Byrds"],
+      "correctIndex": 0,
+      "explanation": "Creed Bratton was in the 1960s band The Grass Roots.",
+      "tags": ["creed", "music", "behind-the-scenes"],
+      "difficulty": 2
+    },
+    {
+      "id": "CB-005",
+      "type": "single",
+      "prompt": "Around Halloween, Creed shows up with what changed?",
+      "answers": ["Jet‑black dyed hair", "Shaved eyebrows", "Bleached beard", "Face paint"],
+      "correctIndex": 0,
+      "explanation": "He appears unexpectedly with dyed black hair.",
+      "tags": ["creed", "halloween"],
+      "difficulty": 1
+    },
+    {
+      "id": "CB-006",
+      "type": "single",
+      "prompt": "Creed briefly serves as what at the Scranton branch?",
+      "answers": ["Acting manager", "Warehouse foreman", "Sales lead", "HR interim"],
+      "correctIndex": 0,
+      "explanation": "After Michael leaves, Creed is acting manager for a short period.",
+      "tags": ["creed", "management"],
+      "difficulty": 2
+    }
+  ]
+}

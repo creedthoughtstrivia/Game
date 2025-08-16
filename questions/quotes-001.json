@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "setId": "quotes-001",
+    "title": "Quotes & Lines",
+    "author": "CT Team",
+    "version": 1
+  },
+  "settings": {
+    "shuffleQuestions": true,
+    "shuffleAnswers": true,
+    "perQuestionTimerSec": 20,
+    "showExplanations": true
+  },
+  "questions": [
+    {
+      "id": "QU-001",
+      "type": "single",
+      "prompt": "Who says ‘I’m not superstitious, but I am a little stitious’?",
+      "answers": ["Michael", "Jim", "Dwight", "Andy"],
+      "correctIndex": 0,
+      "explanation": "Michael delivers this memorable line.",
+      "tags": ["quotes", "michael"],
+      "difficulty": 1
+    },
+    {
+      "id": "QU-002",
+      "type": "single",
+      "prompt": "‘That’s what she said’ is a recurring joke used by…",
+      "answers": ["Michael", "Creed", "Pam", "Oscar"],
+      "correctIndex": 0,
+      "explanation": "Michael often follows innocuous remarks with this innuendo.",
+      "tags": ["quotes", "catchphrase"],
+      "difficulty": 1
+    },
+    {
+      "id": "QU-003",
+      "type": "single",
+      "prompt": "Which character declares ‘Bears.  Beets.  Battlestar Galactica.’?",
+      "answers": ["Jim", "Dwight", "Andy", "Ryan"],
+      "correctIndex": 0,
+      "explanation": "Jim impersonates Dwight with this line.",
+      "tags": ["quotes", "jim", "dwight"],
+      "difficulty": 2
+    },
+    {
+      "id": "QU-004",
+      "type": "single",
+      "prompt": "‘Identity theft is not a joke, Jim!’ is said by…",
+      "answers": ["Dwight", "Stanley", "Kevin", "Angela"],
+      "correctIndex": 0,
+      "explanation": "Dwight yells this after Jim copies his outfit and mannerisms.",
+      "tags": ["quotes", "dwight"],
+      "difficulty": 2
+    },
+    {
+      "id": "QU-005",
+      "type": "single",
+      "prompt": "Who says ‘I talk a lot, so I’ve learned to tune myself out’?",
+      "answers": ["Kelly", "Erin", "Phyllis", "Karen"],
+      "correctIndex": 0,
+      "explanation": "Kelly Kapoor admits this about herself.",
+      "tags": ["quotes", "kelly"],
+      "difficulty": 2
+    },
+    {
+      "id": "QU-006",
+      "type": "single",
+      "prompt": "Who states ‘Sometimes I’ll start a sentence and I don’t even know where it’s going’?",
+      "answers": ["Michael", "Pam", "Oscar", "Darryl"],
+      "correctIndex": 0,
+      "explanation": "Michael confesses his stream‑of‑consciousness speaking style.",
+      "tags": ["quotes", "michael"],
+      "difficulty": 2
+    }
+  ]
+}

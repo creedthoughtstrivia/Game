@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "setId": "office-general-001",
+    "title": "Office General Vol. 1",
+    "author": "CT Team",
+    "version": 1
+  },
+  "settings": {
+    "shuffleQuestions": true,
+    "shuffleAnswers": true,
+    "perQuestionTimerSec": 20,
+    "showExplanations": true
+  },
+  "questions": [
+    {
+      "id": "OG-001",
+      "type": "single",
+      "prompt": "Who is the Scranton branch regional manager for most of the early series?",
+      "answers": ["Michael Scott", "Jan Levinson", "Jim Halpert", "Dwight Schrute"],
+      "correctIndex": 0,
+      "explanation": "Michael Scott leads the Scranton branch for the first seven seasons.",
+      "tags": ["general", "management"],
+      "difficulty": 1
+    },
+    {
+      "id": "OG-002",
+      "type": "single",
+      "prompt": "Jim and Pam get married at which famous location?",
+      "answers": ["Niagara Falls", "Central Park", "Lake Scranton", "The Poconos"],
+      "correctIndex": 0,
+      "explanation": "They elope on the Maid of the Mist at Niagara Falls.",
+      "tags": ["jim", "pam", "wedding"],
+      "difficulty": 2
+    },
+    {
+      "id": "OG-003",
+      "type": "single",
+      "prompt": "Dwight owns which kind of farm?",
+      "answers": ["Beet farm", "Corn farm", "Pumpkin farm", "Dairy farm"],
+      "correctIndex": 0,
+      "explanation": "Schrute Farms is a beet farm and bed‑and‑breakfast.",
+      "tags": ["dwight", "farm"],
+      "difficulty": 1
+    },
+    {
+      "id": "OG-004",
+      "type": "single",
+      "prompt": "What is Stanley’s favorite office day?",
+      "answers": ["Pretzel Day", "Casual Friday", "Beach Day", "Merger Day"],
+      "correctIndex": 0,
+      "explanation": "Stanley looks forward to Pretzel Day every year.",
+      "tags": ["stanley"],
+      "difficulty": 1
+    },
+    {
+      "id": "OG-005",
+      "type": "single",
+      "prompt": "Darryl starts in the warehouse and later moves…",
+      "answers": ["Upstairs to an office role", "To Utica", "To Nashua", "Back to college"],
+      "correctIndex": 0,
+      "explanation": "He transitions to a management position upstairs.",
+      "tags": ["darryl", "career"],
+      "difficulty": 2
+    },
+    {
+      "id": "OG-006",
+      "type": "single",
+      "prompt": "Which company acquires Dunder Mifflin mid‑series?",
+      "answers": ["Sabre", "Utica Paper", "Prince Family Paper", "Athlead"],
+      "correctIndex": 0,
+      "explanation": "Sabre, led by Jo Bennett, purchases Dunder Mifflin.",
+      "tags": ["corporate", "sabre"],
+      "difficulty": 2
+    }
+  ]
+}
