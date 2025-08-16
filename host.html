@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Host Console • Scranton Trivia Showdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script type="module" src="config.js"></script>
+  <script defer type="module" src="rt.js"></script>
+  <script defer type="module" src="host.js"></script>
+</head>
+<body>
+<header class="paper">
+  <h1>Host Console</h1>
+  <p class="tag">Create and run live Office trivia tournaments.</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Create Match</h2>
+    <label>Host PIN <input id="hostPin" maxlength="6" placeholder="e.g., 432198"/></label>
+    <label>Match Code <input id="matchCode" maxlength="12" placeholder="e.g., SCRANTON"/></label>
+    <label>Category <select id="categoryLive"></select></label>
+    <label>Question Set <select id="setLive"></select></label>
+    <label>Question Count <input id="countLive" type="number" min="5" max="50" value="10"/></label>
+    <label>Time / Question (sec) <input id="timePerQ" type="number" min="10" max="120" value="25"/></label>
+    <button id="btnCreateMatch">Create</button>
+  </section>
+
+  <section class="card">
+    <h2>Controls</h2>
+    <div>Players: <span id="playerCount">0</span> • Question: <span id="qIdx">-</span></div>
+    <div class="row">
+      <button id="btnOpenQ" disabled>Open Question</button>
+      <button id="btnCloseQ" disabled>Close Question</button>
+      <button id="btnNextQ" disabled>Next Question</button>
+      <button id="btnEnd" disabled>End Match</button>
+    </div>
+    <div id="liveInfo"></div>
+  </section>
+
+  <section class="card">
+    <h2>Live Leaderboard</h2>
+    <div id="lbLive"></div>
+  </section>
+</main>
+</body>
+</html>

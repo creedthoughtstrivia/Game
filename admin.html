@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Admin • Scranton Trivia Showdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script type="module" src="config.js"></script>
+  <script defer type="module" src="rt.js"></script>
+  <script defer type="module" src="admin.js"></script>
+</head>
+<body>
+<header class="paper">
+  <h1>Admin Panel</h1>
+  <p class="tag">Enter your owner passcode to unlock settings and tools.</p>
+</header>
+
+<main>
+  <section class="card" id="gate">
+    <h2>Owner Login</h2>
+    <label>Owner Passcode <input id="ownerPass" type="password" placeholder="••••••"/></label>
+    <button id="btnOwnerLogin">Unlock</button>
+    <p class="muted">Change your passcode in <code>config.js</code> before deploying.</p>
+  </section>
+
+  <section class="card hidden" id="settings">
+    <h2>Global Settings</h2>
+    <div class="grid">
+      <label>Base Correct Points <input id="sBase" type="number" value="100"/></label>
+      <label>Speed Bonus Max <input id="sSpeedMax" type="number" value="50"/></label>
+      <label>First Correct Bonus <input id="sFirst" type="number" value="100"/></label>
+      <label>Default Time per Q <input id="sTime" type="number" value="25"/></label>
+      <label>Shuffle Questions <input id="sShufQ" type="checkbox" checked/></label>
+      <label>Shuffle Answers <input id="sShufA" type="checkbox" checked/></label>
+      <label>Daily Seed <input id="sSeed" type="checkbox"/></label>
+      <label>Solo Leaderboard Retention (days) <input id="sRet" type="number" value="7"/></label>
+    </div>
+    <button id="btnSaveSettings">Save Settings</button>
+  </section>
+
+  <section class="card hidden" id="content">
+    <h2>Question Sets</h2>
+    <div>
+      <input type="file" id="fileJson" accept=".json"/>
+      <button id="btnUploadSet">Upload Set</button>
+      <a class="btn" href="tools/csv-import.html" target="_blank">CSV → JSON Tool</a>
+    </div>
+    <div id="setsList"></div>
+  </section>
+
+  <section class="card hidden" id="tools">
+    <h2>Maintenance Tools</h2>
+    <button id="btnRotateOwnerHint">Rotate Owner Passcode (edit config.js)</button>
+    <button id="btnClearSolo">Clear Solo Leaderboard</button>
+  </section>
+</main>
+
+</body>
+</html>

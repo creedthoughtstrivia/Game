@@ -1,0 +1,59 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/>
+<title>Player</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="styles.css"/>
+<script type="module" src="config.js"></script>
+<script type="module" src="rt.js"></script>
+</head>
+<body>
+<main class="card">
+  <h2 id="hdr">Match</h2>
+  <div id="status">Waiting for host…</div>
+  <div id="q"></div>
+</main>
+<script type="module">
+import { subscribeMatch, submitAnswer } from './rt.js';
+
+const params = new URLSearchParams(location.search);
+const matchId = params.get('mid'), playerId = params.get('pid');
+let state = { qIdx: -1, answered: false, startAt: 0, current: null };
+
+subscribeMatch(matchId, (m) => {
+  const d = m.data;
+  document.getElementById('hdr').textContent = `Match ${d.code}`;
+  if (d.state === 'open' && d.qIndex !== state.qIdx) {
+    state.qIdx = d.qIndex; state.answered = false;
+    const q = d.questions[d.qIndex];
+    state.current = q;
+    document.getElementById('status').textContent = `Question ${d.qIndex + 1} of ${d.questions.length}`;
+    const box = document.getElementById('q');
+    box.innerHTML = `<h3>${q.prompt}</h3>`;
+    q.answers.forEach((a, i) => {
+      const div = document.createElement('div');
+      div.className = 'answer';
+      div.textContent = a;
+      div.onclick = () => answer(i);
+      box.appendChild(div);
+    });
+    state.startAt = performance.now();
+  } else if (d.state === 'closed') {
+    document.getElementById('q').innerHTML = '<i>Question closed.</i>';
+  } else if (d.state === 'ended') {
+    document.getElementById('q').innerHTML = '<b>Match ended</b>';
+  }
+});
+
+async function answer(idx) {
+  if (state.answered) return;
+  state.answered = true;
+  const ms = Math.max(0, performance.now() - state.startAt);
+  const correct = (idx === state.current.correctIndex);
+  await submitAnswer({ matchId, playerId, idx, correct, ms });
+  [...document.querySelectorAll('.answer')].forEach((d, i) => {
+    if (i === state.current.correctIndex) d.classList.add('correct');
+    if (i === idx && i !== state.current.correctIndex) d.classList.add('wrong');
+  });
+}
+</script>
+</body></html>

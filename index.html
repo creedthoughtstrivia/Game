@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Scranton Trivia Showdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta property="og:title" content="Scranton Trivia Showdown"/>
+  <meta property="og:description" content="Play solo or join a live Office trivia tournament."/>
+  <meta property="og:type" content="website"/>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script type="module" src="config.js"></script>
+  <script defer type="module" src="rt.js"></script>
+  <script defer type="module" src="app.js"></script>
+</head>
+<body>
+<header class="paper">
+  <h1>Scranton Trivia Showdown</h1>
+  <p class="tag">Test your Office knowledge in solo mode or live tournaments.</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Play Solo</h2>
+    <label>Display Name
+      <input id="nameSolo" maxlength="20" placeholder="e.g., Pam"/>
+    </label>
+    <label>Category
+      <select id="categorySolo"></select>
+    </label>
+    <label>Question Set
+      <select id="setSolo"></select>
+    </label>
+    <label>Number of Questions
+      <input id="countSolo" type="number" min="5" max="50" value="10"/>
+    </label>
+    <button id="btnStartSolo">Start Quiz</button>
+  </section>
+
+  <section class="card">
+    <h2>Join Live Match</h2>
+    <label>Display Name
+      <input id="nameLive" maxlength="20" placeholder="e.g., Dwight"/>
+    </label>
+    <label>Match Code
+      <input id="codeLive" maxlength="12" placeholder="e.g., SCRANTON"/>
+    </label>
+    <a class="btn" id="btnJoinLive" href="#">Join</a>
+  </section>
+
+  <section class="card">
+    <h2>Solo Leaderboard</h2>
+    <div id="leaderboard"></div>
+  </section>
+
+  <p class="admin-link"><a href="admin.html">Admin</a> • <a href="host.html">Host Console</a></p>
+
+  <section class="card hidden" id="quizCard">
+    <div id="quizMeta"></div>
+    <div id="questionBox"></div>
+    <div id="controls">
+      <button id="btnNext" disabled>Next</button>
+    </div>
+  </section>
+
+  <section class="card hidden" id="resultCard">
+    <h2>Results</h2>
+    <div id="resultSummary"></div>
+    <button id="btnShare">Copy Summary</button>
+  </section>
+</main>
+
+<footer>© Scranton Trivia Showdown — a fan project for Creed Thoughts & Office Addicts</footer>
+</body>
+</html>
